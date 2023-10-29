@@ -6,6 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SsuJo_</title>
+    <script type="text/javascript">
+        var redirect = () => {
+            // 获取设备信息
+            let userAgent = navigator.userAgent.toLowerCase();
+            // 使用正则表达式判断设备类型
+            let device = /ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/;
+            if(device.test(userAgent)){
+                // 跳转到移动端页面
+                window.location.href="mobile";
+            }else{
+                // 跳转到桌面端页面
+                //window.location.href="pc.html";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="/tapple/main.css">
     <link rel="stylesheet" href="style.css">
     <base target="_blank">
