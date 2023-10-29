@@ -6,27 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SsuJo_</title>
-    <script type="text/javascript">
-        var redirect = () => {
-            // 获取设备信息
-            let userAgent = navigator.userAgent.toLowerCase();
-            // 使用正则表达式判断设备类型
-            let device = /ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/;
-            if(device.test(userAgent)){
-                // 跳转到移动端页面
-                window.location.href="mobile";
-            }else{
-                // 跳转到桌面端页面
-                //window.location.href="pc.html";
-            }
-        }
-    </script>
     <link rel="stylesheet" href="/tapple/main.css">
     <link rel="stylesheet" href="style.css">
     <base target="_blank">
 </head>
 
 <body>
+    <script type="text/javascript">
+        windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        if (windowHeight >= windowWidth) {
+            // 跳转到移动端页面
+            window.location.href = "/m";
+        } else {
+            //window.location.href = "/p";
+        }
+    </script>
     <div id="loadback"
         style="background-color:#000;width:100%;height:100%;z-index:105;position:fixed;transition:5s;top:0;left:0;color: #d2d2d2;">
         <p id="loadbacktext"
