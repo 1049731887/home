@@ -1,6 +1,6 @@
 body {
     padding: 0 0 500px;
-    background: url(lowerspeed.jpg) center;
+    background: url(background.jpg) center;
     background-attachment: fixed;
     background-size: cover;
     background-color: #222;
@@ -101,7 +101,7 @@ a.jump:active{
     font-size: 40px;
     line-height: 1;
     top: 110px;
-    left: 160px;
+    left: 180px;
 }
 
 #title>.text.eng{
