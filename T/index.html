@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #container {
+            /* 创建一个 3D 空间 */
+            transform-style: preserve-3d;
+            /* 设置透视效果 */
+            perspective: 500px;
+            /* 设置透视原点 */
+            perspective-origin: center center;
+        }
+
+        #rect {
+            position: absolute;
+            background-color: green;
+            border: 2px solid black;
+            /* 设置宽度和高度为 16:9 的比例 */
+            width: 400px;
+            height: 225px;
+            /* 设置 div 的中心点为左上角 */
+            transform-origin: top left;
+        }
+    </style>
+    <div id="container">
+        <div id="rect">
+            <img src="img.jpg">
+
+        </div>
+    </div>
+    <script>
+        // 定义四个顶点的坐标，顺序为左上、右上、右下、左下
+        var points = [
+            [326, 537],
+            [3950, 970],
+            [3306, 2363],
+            [468, 2380]
+        ];
+
+        // 计算矩形相对于X轴和Y轴的偏转角
+        var angleX = Math.atan2(points[1][1] - points[0][1], points[1][0] - points[0][0]);alert(angleX);
+        var angleY = Math.atan2(points[2][1] - points[1][1], points[2][0] - points[1][0]);alert(angleY);
+
+        // 将角度转换为度数
+        var degreeX = angleX * 180 / Math.PI;alert(degreeX);
+        var degreeY = angleY * 180 / Math.PI;alert(degreeY);
+
+        // 获取矩形元素
+        var rect = document.getElementById("rect");
+
+        // 设置矩形的旋转属性，使其与X轴和Y轴平行
+        rect.style.transform = "rotateX(" + (-degreeX) + "deg) rotateY(" + (-degreeY) + "deg)";
+    </script>
+</body>
+
+</html>
