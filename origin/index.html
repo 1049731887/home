@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SsuJo_</title>
+    <link rel="stylesheet" href="/tapple/main.css">
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?c392a0a8110e6d1f1fe78ed7e7406dfe";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    </head>
+
+<body>
+    <script type="text/javascript">
+        windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        if (windowHeight >= windowWidth) {
+            // 跳转到移动端页面
+            window.location.href = "/m";
+        } else {
+            //window.location.href = "/p";
+        }
+    </script>
+    <div id="loadback"
+        style="background-color:#000;width:100%;height:100%;z-index:105;position:fixed;transition:5s;top:0;left:0;color: #d2d2d2;">
+        <p id="loadbacktext"
+            style="width:100%;position:absolute;left:0;font-size:50px;transition:1s;height:100px;top:calc(50% - 80px);text-align:center;opacity:0;margin:0;">
+            嗨,别来无恙啊!</p>
+        <p id="loadbacktexteng"
+            style="width:100%;position:absolute;left:0;font-size:25px;transition:1s;height:50px;top:50%;text-align:center;opacity:0;margin:0;">
+            Hi,terribly nice to meet you!</p>
+        <script>setTimeout(() => { document.getElementById('loadbacktext').style.opacity = 1; document.getElementById('loadbacktexteng').style.opacity = 1; }, 100);
+            setTimeout(() => { document.getElementById('loadbacktext').style.opacity = 0; document.getElementById('loadbacktexteng').style.opacity = 0; }, 2100);
+            setTimeout(() => {
+                document.getElementById('loadbacktext').innerText = '与君初相识，犹如故人归。欢迎来到SsuJo_的网站';
+                document.getElementById('loadbacktexteng').innerText = 'Meeting you first time is like seeing an old friend.Welcome to SsuJo_\'s website.'
+                document.getElementById('loadbacktext').style.opacity = 1; document.getElementById('loadbacktexteng').style.opacity = 1;
+            }, 4100);
+            let zh_ms = ['海内存知己,天涯若比邻,正在加载请稍等...', '有朋自远方来,不亦乐乎,欢迎!', '君问归期未有期,巴山夜雨涨秋池,请耐心等待',
+                '无可奈何花落去,似曾相识燕归来,页面马上加载出来',
+                // '十年生死两茫茫,等待总是有结果的,请耐心',
+                '盈缩之期,不但在天;养怡之福,可得永年。正在努力加载', '遗民泪尽胡尘里,南望王师又一年,你的网络太慢了',
+                '让我们再来一次吧']; let en_ms = ['Wherever you are,friendship never chenge.Page is loading...', 'Meeting friends is very happy.Welcome!',
+                    'Your returning date hasn\'t decided,rain rises the pond.Please wait', 'Flowers fall helplessly,the swallow return again,Page coming soon',
+                    // 'Ten yaers,the distance between life and death.Please wait patiently',
+                    'The length of life is not just decided by god.Loading hard...',
+                    'Loyalists crying in Hun\'s territory,year after year.The network is too slow.', 'Let\'s do it again'];
+            let c = -1;
+            let bcci = setInterval(() => {
+                document.getElementById('loadbacktext').style.opacity = 0; document.getElementById('loadbacktexteng').style.opacity = 0;
+                setTimeout(() => {
+                    c++; document.getElementById('loadbacktext').innerText = zh_ms[c % 7];
+                    document.getElementById('loadbacktexteng').innerText = en_ms[c % 7];
+                    document.getElementById('loadbacktext').style.opacity = 1; document.getElementById('loadbacktexteng').style.opacity = 1;
+                }, 1000); document.getElementById('loadback').style.backgroundColor = '#003561';
+                setTimeout(() => { document.getElementById('loadback').style.backgroundColor = '#000'; }, 5000);
+            }, 10000);
+            document.body.onload = () => { document.getElementById('loadback').style.opacity = 0; setTimeout(() => { document.getElementById('loadback').style.display = 'none'; }, 3000); clearInterval(bcci) };</script>
+    </div>
+    <div id="title">
+
+        <svg class="xing" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+            <g>
+                <g>
+                    <rect fill="#FFFFFF" width="0" height="0" />
+                </g>
+                <g transform="translate(16,0)">
+                    <path fill="#6c91ee"
+                        d="M42.50 119.69L42.50 119.69Q43.91 117.97 45.16 120.94L45.16 120.94Q46.72 124.38 47.97 134.38L47.97 134.38Q48.13 135.94 47.97 136.48Q47.81 137.03 46.72 137.81L46.72 137.81Q45.31 139.22 43.28 138.91Q41.25 138.59 39.69 137.03L39.69 137.03Q38.59 135.78 38.44 135.16Q38.28 134.53 38.44 132.03L38.44 132.03Q38.59 129.84 40 125.39Q41.41 120.94 42.50 119.69ZM86.17 51.17Q83.44 48.44 84.14 47.97Q84.84 47.50 89.22 47.81Q93.59 48.13 96.95 49.84Q100.31 51.56 101.25 52.81L101.25 52.81Q103.28 55.47 102.03 59.84L102.03 59.84Q101.41 61.56 101.95 62.27Q102.50 62.97 104.61 63.28Q106.72 63.59 108.59 64.22L108.59 64.22Q111.56 65.47 109.22 67.34L109.22 67.34Q107.34 68.59 104.06 68.91L104.06 68.91Q100.78 69.06 100.16 69.53L100.16 69.53Q99.53 70 97.03 73.83Q94.53 77.66 93.44 80.16L93.44 80.16Q92.50 81.88 91.80 82.50Q91.09 83.13 90 85.39Q88.91 87.66 86.41 90.47L86.41 90.47Q84.22 93.13 83.83 94.14Q83.44 95.16 84.22 96.09L84.22 96.09Q84.84 96.88 86.25 96.48Q87.66 96.09 88.28 95.63Q88.91 95.16 92.89 94.53Q96.88 93.91 99.06 94.53L99.06 94.53Q102.66 95.47 104.30 97.19Q105.94 98.91 106.56 102.03L106.56 102.03Q106.88 103.91 106.80 104.69Q106.72 105.47 105.94 107.34L105.94 107.34Q102.97 114.22 103.59 115.63L103.59 115.63Q103.75 116.25 109.22 117.97L109.22 117.97Q117.66 120.94 123.59 125.63L123.59 125.63Q125.47 127.34 127.19 130.63Q128.91 133.91 128.13 135L128.13 135Q127.66 135.94 126.17 136.80Q124.69 137.66 123.44 137.66L123.44 137.66Q121.25 137.66 113.13 131.72L113.13 131.72Q110.31 129.69 105.47 126.88L105.47 126.88Q101.25 124.53 100.23 124.53Q99.22 124.53 98.28 126.72L98.28 126.72Q87.19 153.13 84.84 154.38L84.84 154.38Q82.97 155.47 78.59 152.03L78.59 152.03Q76.09 150 75.23 148.75Q74.38 147.50 73.75 144.38L73.75 144.38Q72.03 135.31 71.56 134.53L71.56 134.53Q71.25 134.06 70.47 134.06Q69.69 134.06 67.03 139.22Q64.38 144.38 61.48 147.81Q58.59 151.25 56.88 151.56Q55.16 151.88 52.50 149.69L52.50 149.69Q50.47 147.81 49.61 144.06Q48.75 140.31 50 138.44L50 138.44Q50.63 137.66 51.02 137.66Q51.41 137.66 52.50 137.97L52.50 137.97Q54.06 138.59 55.16 137.81L55.16 137.81Q56.41 136.72 61.09 129.06Q65.78 121.41 67.97 117.03L67.97 117.03Q70.16 112.97 69.06 112.97L69.06 112.97Q69.06 112.97 68.75 113.13L68.75 113.13L63.28 114.84L58.44 116.41L54.53 115.78Q51.56 115.16 48.91 113.98Q46.25 112.81 46.25 111.88L46.25 111.88Q46.25 111.25 51.41 111.25L51.41 111.25L56.72 111.25L60.63 109.22Q64.69 107.34 65.63 106.48Q66.56 105.63 68.36 105.08Q70.16 104.53 73.20 102.42Q76.25 100.31 76.88 99.22L76.88 99.22Q77.66 97.97 77.34 94.77Q77.03 91.56 77.97 88.98Q78.91 86.41 79.84 83.05Q80.78 79.69 82.03 77.89Q83.28 76.09 82.50 75.47L82.50 75.47Q82.03 75 81.48 75.16Q80.94 75.31 79.38 76.25L79.38 76.25Q77.03 77.81 74.69 79.22L74.69 79.22Q70 81.88 70 83.44L70 83.44Q70 84.22 71.48 87.73Q72.97 91.25 72.50 92.81L72.50 92.81Q71.09 95.94 66.56 95.47L66.56 95.47Q63.13 95 60.94 91.88L60.94 91.88Q57.81 87.03 55.31 87.03L55.31 87.03Q52.03 87.03 46.56 85Q41.09 82.97 39.38 81.25L39.38 81.25Q38.59 80.31 39.30 80.08Q40 79.84 42.11 80.31Q44.22 80.78 49.06 80.78L49.06 80.78Q54.06 80.78 55 80Q55.94 79.22 55.94 74.22L55.94 74.22Q55.94 70.47 56.09 69.69Q56.25 68.91 56.95 68.52Q57.66 68.13 58.36 68.59Q59.06 69.06 61.72 71.72L61.72 71.72Q65.16 75.78 65.86 75.78Q66.56 75.78 72.66 73.20Q78.75 70.63 80.47 70L80.47 70Q86.41 67.81 86.72 66.41L86.72 66.41Q87.19 64.84 88.05 60.39Q88.91 55.94 88.91 55.16L88.91 55.16Q88.91 53.91 86.17 51.17ZM92.97 101.72L92.97 101.72Q92.50 101.09 92.19 101.09L92.19 101.09Q91.72 101.09 88.05 102.97Q84.38 104.84 83.75 105.47L83.75 105.47Q83.13 106.09 81.72 108.75Q80.31 111.41 80.31 112.03L80.31 112.03Q80.31 112.81 77.97 118.13Q75.63 123.44 75.31 124.69L75.31 124.69Q74.69 126.25 76.33 129.77Q77.97 133.28 79.38 134.45Q80.78 135.63 81.64 135.08Q82.50 134.53 83.59 131.41L83.59 131.41Q84.84 128.44 85.94 126.25L85.94 126.25Q89.38 119.22 88.75 117.19L88.75 117.19Q88.44 116.41 87.34 115.70Q86.25 115 86.25 114.22Q86.25 113.44 88.44 113.28L88.44 113.28Q90 113.13 90.39 112.81Q90.78 112.50 91.72 110.47L91.72 110.47Q92.81 108.28 93.20 105.39Q93.59 102.50 92.97 101.72Z" />
+                </g>
+            </g>
+        </svg>
+        <svg class="yuan" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+            <g>
+                <g>
+                    <rect fill="#FFFFFF" width="0" height="0" />
+                </g>
+                <g transform="translate(16,0)">
+                    <path fill="#79bbdc"
+                        d="M96.41 48.44L96.41 48.44Q97.50 48.13 99.22 50.47L99.22 50.47Q100.63 52.19 100.55 55.08Q100.47 57.97 98.36 62.11Q96.25 66.25 95.94 67.81Q95.63 69.38 95.23 69.61Q94.84 69.84 93.28 73.05Q91.72 76.25 90.78 78.59Q89.84 80.94 88.75 83.28Q87.66 85.63 87.66 86.17Q87.66 86.72 86.56 88.91L86.56 88.91Q84.53 92.50 86.72 92.50L86.72 92.50Q87.50 92.50 92.42 88.67Q97.34 84.84 98.91 83.28L98.91 83.28Q102.19 79.22 107.66 81.09L107.66 81.09Q110 81.88 110.55 83.13Q111.09 84.38 110.78 88.28L110.78 88.28Q110.63 91.25 110.23 92.66Q109.84 94.06 108.13 97.34L108.13 97.34Q100.31 113.44 100.31 114.06L100.31 114.06Q100.31 114.84 97.34 120.78L97.34 120.78Q96.72 122.03 96.72 122.50L96.72 122.50Q96.72 124.06 101.41 125L101.41 125Q105.16 125.63 113.83 129.06Q122.50 132.50 126.72 134.69L126.72 134.69Q130.16 136.56 133.52 139.92Q136.88 143.28 136.88 144.84L136.88 144.84Q136.88 146.25 135.08 147.66Q133.28 149.06 132.03 148.75L132.03 148.75Q130.63 148.59 123.05 143.44Q115.47 138.28 109.14 135.16Q102.81 132.03 99.22 129.92Q95.63 127.81 94.84 127.81L94.84 127.81Q93.13 127.81 87.50 138.75L87.50 138.75Q82.81 148.13 80.31 149.38L80.31 149.38Q79.53 149.84 78.91 149.77Q78.28 149.69 75.94 148.59L75.94 148.59Q73.44 147.19 72.58 145.70Q71.72 144.22 72.03 141.72L72.03 141.72Q72.19 139.69 73.52 136.72Q74.84 133.75 75.78 133.59L75.78 133.59Q76.56 133.28 77.66 132.97L77.66 132.97Q79.69 132.66 83.75 124.38L83.75 124.38L87.50 117.34Q89.22 114.06 90.94 110L90.94 110L94.53 102.50Q97.19 97.03 95.16 97.34L95.16 97.34Q94.22 97.50 92.50 98.91L92.50 98.91L87.50 102.81Q84.22 105.16 82.34 106.95Q80.47 108.75 78.13 108.75L78.13 108.75Q74.22 108.75 72.97 105.63L72.97 105.63Q72.34 104.06 71.72 103.75Q71.09 103.44 68.83 105.86Q66.56 108.28 64.38 109.22L64.38 109.22Q61.88 110.31 61.25 111.64Q60.63 112.97 60.63 116.25L60.63 116.25Q60.63 118.91 60.70 119.53Q60.78 120.16 61.72 120.31L61.72 120.31Q62.81 120.63 65.16 119.22L65.16 119.22Q66.56 118.28 68.67 117.50Q70.78 116.72 71.09 116.88L71.09 116.88Q71.56 117.34 71.56 119.53L71.56 119.53Q71.41 120.47 68.13 124.45Q64.84 128.44 62.50 130.31L62.50 130.31Q60.78 131.56 57.89 133.28Q55 135 54.22 135L54.22 135Q53.75 135 52.34 135.86Q50.94 136.72 49.22 137.34Q47.50 137.97 46.41 138.75L46.41 138.75Q45 139.69 40.55 141.17Q36.09 142.66 34.84 142.66L34.84 142.66Q33.28 142.66 32.19 142.03L32.19 142.03Q30.94 141.56 29.45 138.83Q27.97 136.09 27.97 134.69L27.97 134.69Q27.97 130.63 37.03 121.41L37.03 121.41Q43.59 114.84 45.47 113.44L45.47 113.44Q46.56 112.66 46.80 112.19Q47.03 111.72 46.56 111.25L46.56 111.25Q46.09 110.47 43.59 110.47L43.59 110.47Q40.78 110.47 39.30 109.77Q37.81 109.06 36.41 106.88L36.41 106.88Q34.69 104.22 34.92 103.13Q35.16 102.03 36.48 102.03Q37.81 102.03 39.06 102.50Q40.31 102.97 45.16 102.34L45.16 102.34Q49.84 101.88 51.02 100.94Q52.19 100 52.66 96.02Q53.13 92.03 52.34 91.25Q51.56 90.47 48.75 91.25L48.75 91.25Q40.47 93.59 33.59 89.22L33.59 89.22Q31.41 87.81 31.64 87.27Q31.88 86.72 34.69 86.88L34.69 86.88Q36.72 87.03 37.81 86.88Q38.91 86.72 41.56 85.47L41.56 85.47Q47.03 83.13 50.31 80.47L50.31 80.47Q52.19 78.91 53.98 78.05Q55.78 77.19 59.06 74.53L59.06 74.53Q61.88 72.03 63.52 71.33Q65.16 70.63 67.03 70.94L67.03 70.94Q68.75 71.09 69.45 71.88Q70.16 72.66 70.47 74.53L70.47 74.53Q71.41 78.59 67.97 80.47L67.97 80.47Q61.88 83.59 60.63 85.08Q59.38 86.56 60 89.22L60 89.22Q60.47 91.72 60.78 94.22L60.78 94.22Q61.09 96.25 61.80 96.95Q62.50 97.66 65 98.28Q67.50 98.91 68.44 100.47L68.44 100.47Q70 103.13 70.78 101.25L70.78 101.25Q72.03 97.34 76.09 88.91Q80.16 80.47 81.41 79.22L81.41 79.22Q82.66 77.50 83.83 75Q85 72.50 86.88 68.75L86.88 68.75L91.72 60Q95.78 52.66 95.78 50L95.78 50Q95.78 48.75 96.41 48.44ZM50.31 121.41L50.31 121.41Q50.16 118.59 49.92 117.97Q49.69 117.34 49.06 117.34L49.06 117.34Q48.44 117.34 44.69 121.02Q40.94 124.69 39.61 126.80Q38.28 128.91 38.75 129.45Q39.22 130 42.19 129.84L42.19 129.84Q45.47 129.53 46.64 128.67Q47.81 127.81 48.20 127.81Q48.59 127.81 49.69 126.72L49.69 126.72Q50.31 125.94 50.39 125.08Q50.47 124.22 50.31 121.41Z" />
+                </g>
+            </g>
+        </svg>
+
+
+        <p class="chinese text">的网站</p>
+        <p class="eng text">------ SsuJo_'s website ------</p>
+    </div>
+    <script src="/tapple/jq.min.js"></script>
+    <p style="width: 100px;left: calc(50% - 50px);position: absolute;top: 0;text-align: center;">往下滑...<span
+            class="eng">Scroll down...</span></p>
+    <div class="box card fx h func" style="--speed:5;width: 50%;margin-left: 25%;margin-top: calc(var(--ph) * 2);">
+        <p class="tit">你好!👋<span class="eng">Hello!👋</span></p>
+        <div class="body">
+            <p>很高兴认识你！😀<span class="eng">Glad to meet you!😀</span></p>
+            <p>没错，我就是SsuJo_<span class="eng">Yes, I'm SsuJo_</span></p>
+        </div>
+    </div>
+    <div class="box card" style="--speed:5;width: 50%;margin-left: 25%;margin-top: var(--ph);position: relative;">
+        <p class="tit">自我介绍一下...咳咳<span class="eng">Let me introduce myself...ahem</span></p>
+        <div class="body">
+            <p>SsuJo_ (真实姓名: pyk)<span class="eng">SsuJo_ (True Name: pyk)</span></p>
+
+            <p>国籍: 中国<a class="detail" style='--cnt:"是的，跟你一样。"'>i</a>
+                <span class="eng">Nationalities: China<a class="detail"
+                        style="--cnt:'Yes, it\'s the same as you.';">i</a></span>
+            </p>
+            <p>生日: 2007/07/17<span class="eng">Birthday: Jul 17,2007</span></p>
+            <p>年龄: 自己算<span class="eng">Age: calculate yourself</span></p>
+            <p>身份: 高中生一个<span class="eng">Identity: A high school student</span></p>
+        </div>
+    </div>
+    <div class="box card" style="--speed:5;width: 50%;margin-left: 25%;margin-top: var(--ph);position: relative;">
+        <p class="tit">人生经历与成就<span class="eng">Experiences and achievements</span></p>
+        <div class="body">
+            <s>伟大的马克思主义者，伟大的无产阶级革命家、政治家、军事家、外交家，久经考验的共产主义战士，中国特色社会主义伟大事业的杰出领导者
+                <span class="eng">A great Marxist, a great proletarian revolutionist, politician, militarist and
+                    diplomat, a well tested communist soldier, and an outstanding leader in the great cause of socialism
+                    with Chinese characteristics.</span></s>
+            <p>2019年就读于汕头市金南实验学校<span class="eng">Studied in Shantou Jinnan Experiment School in 2019.</span></p>
+            <p>2022年就读于汕头金中海湾学校<span class="eng">Studied in Shantou Jinzhonghaiwan School in 2022.</span>
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="box card jt"
+        style="--speed:5;width: 50%;margin-left: 25%;margin-top: var(--ph);backdrop-filter: none;background-color: #282828 !important;">
+        <p class="tit"><span class="shine" style="--color:#2374b7;--colorshine:#76cfff;--speed:4;"><s>精通</s>各种语言</span><span
+                class="eng">Be proficient in many languages</span></p>
+        <div class="body">
+            <div>
+                <p style="margin: 0;">Javascript</p>
+                <div>
+                    <div>
+                        <div style="background: #ffab19;width: 99%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Markdown</p>
+                <div>
+                    <div>
+                        <div style="background: #bebebe;width: 85%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">CSS</p>
+                <div>
+                    <div>
+                        <div style="background: #4061e8;width: 78%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Html</p>
+                <div>
+                    <div>
+                        <div style="background: #d66022;width: 70%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">C++</p>
+                <div>
+                    <div>
+                        <div style="background: #4db8a6;width: 52%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Cmd</p>
+                <div>
+                    <div>
+                        <div style="background: #e9c900;width: 46%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Python</p>
+                <div>
+                    <div>
+                        <div style="background: #6c94c9;width: 42%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Vbs</p>
+                <div>
+                    <div>
+                        <div style="background: #aaaaaa;width: 40%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Powershell</p>
+                <div>
+                    <div>
+                        <div style="background: #64047f;width: 30%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">C#</p>
+                <div>
+                    <div>
+                        <div style="background: #a2e0ff;width: 8%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin: 0;">Scratch</p>
+                <div>
+                    <div>
+                        <div style="background: #3e6dbf;width: 7%;height: 100%;border-radius: 10px;"
+                            class="highlight width"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box card fx h func" style="--speed:5;width: 50%;margin-left: 25%;margin-top: var(--ph);">
+        <p class="tit">擅长...<span class="eng">Be talented in...</span></p>
+        <div class="body">
+            <p>瞎装各种系统<span class="eng">Installing many kinds of systems happily</span></p>
+            <p>把各种软件都换成Beta版<span class="eng">Changing all kinds apps to preview/beta version</span></p>
+            <p>剪视频<span class="eng">Editing videos</span></p>
+            <s>唱🎤、跳💃、Rap😲、篮球🏀<span class="eng">Singing🎤, dancing💃, rapping😲 and palying basketball🏀</span></s>
+            <s>玩原神<span class="eng">Play Genshin</span></s>
+            <p>做作业<span class="eng">Doing <s>housework</s> homework</span></p>
+        </div>
+    </div>
+    <div class="box card fx h stop-center" style="--speed:5;width: 50%;margin-left: 25%;margin-top: var(--ph);">
+        <p class="tit">我的项目<span class="eng">My projects...</span></p>
+        <div class="body">
+            <p>其实我没有什么项目...<span class="eng">Nothing...</span></p>
+        </div>
+    </div>
+    <div class="box card fx h func" style="--speed:5;width: 50%;margin-left: 25%;margin-top: var(--ph);">
+        <p class="tit">联系方式<span class="eng">Contact</span></p>
+        <div class="body">
+            <p>邮件: <a href="mailto:yuwwwwww@qq.com" class="jump">yuwwwwww@qq.com</a><span class="eng">E-mail: <a
+                        href="mailto:yuwwwwww@qq.com" class="jump">yuwwwwww@qq.com</a></span></p>
+            <p>哔哩哔哩: <a href="https://space.bilibili.com/2008120703" class="jump">yuwwwwww</a><span
+                    class="eng">Bilibili: <a href="https://space.bilibili.com/2008120703"
+                        class="jump">yuwwwwww</a></span></p>
+
+        </div>
+    </div>
+    <div class="box text center lock" style="margin-top: var(--ph);">
+        <h1 style="font-size: 90px;"><span style="color: #fff;">没别的了</span><span class="eng">That's all</span></h1>
+    </div>
+
+    <img src="win12.svg" style="width: 0;height: 0;opacity: 0;border: 0;margin: 0;">
+    <img src="nikov.svg" style="width: 0;height: 0;opacity: 0;border: 0;margin: 0;">
+    <script src="/tapple/scroll.js"></script>
+    <script>
+        my_scroll = (t) => {
+            if (t == 0) {
+                $('#title>.xing').css('transform', `translateY(100px)`);
+                $('#title>.xing').css('opacity', `0`);
+                $('#title>.yuan').css('transform', `translateY(100px)`);
+                $('#title>.yuan').css('opacity', `0`);
+                $('#title>.text').css('transform', `translateY(50px)`);
+                $('#title>.text').css('opacity', `0`);
+            } else if (0 < t && t < 100) {
+                $('#title>.xing').css('transform', `translateY(${(100 - t)}px)`);
+                $('#title>.xing').css('opacity', `${(t / 100)}`);
+                $('#title>.yuan').css('transform', `translateY(100px)`);
+                $('#title>.yuan').css('opacity', `0`);
+            } else if (t >= 100 && t < 200) {
+                $('#title>.xing').css('transform', `translateY(0)`);
+                $('#title>.xing').css('opacity', `1`);
+                $('#title>.yuan').css('transform', `translateY(${(200 - t)}px)`);
+                $('#title>.yuan').css('opacity', `${((t - 100) / 100)}`);
+                $('#title>.text').css('transform', `translateY(50px)`);
+                $('#title>.text').css('opacity', `0`);
+            } else if (t >= 200 && t < 300) {
+                $('#title>.yuan').css('transform', `translateY(0)`);
+                $('#title>.yuan').css('opacity', `1`);
+                $('#title>.text').css('transform', `translateY(0)`);
+                $('#title>.text').css('opacity', `1`);
+                $('#title').show(200);
+            } else if (t < 400) {
+                $('#title>.xing').css('transform', `translateY(0)`);
+                $('#title>.xing').css('opacity', `1`);
+                $('#title>.yuan').css('transform', `translateY(0)`);
+                $('#title>.yuan').css('opacity', `1`);
+                $('#title>.text').css('transform', `translateY(0)`);
+                $('#title>.text').css('opacity', `1`);
+                $('#title').show(200);
+            } else {
+                $('#title').hide(200);
+            }
+            const box_win12 = $('#win12')[0];
+            if (t < box_win12.offsetTop + box_win12.offsetHeight && box_win12.offsetTop - ph < t) {
+                if (!$('body').hasClass('win12')) $('body').addClass('win12');
+            } else {
+                $('body').removeClass('win12');
+            }
+            const box_nikov = $('#nikov')[0];
+            if (t < box_nikov.offsetTop + box_nikov.offsetHeight && box_nikov.offsetTop - ph < t) {
+                if (!$('body').hasClass('nikov')) $('body').addClass('nikov');
+            } else {
+                $('body').removeClass('nikov');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
