@@ -68,7 +68,7 @@ a.jump:active{
     top: calc(50% - 125px);
 }
 
-#title>.xing{
+#title>.su{
     width: 210px;
     fill: #6c91ee;
     position: absolute;
@@ -78,7 +78,7 @@ a.jump:active{
     transform: translateY(100px);
 }
 
-#title>.yuan{
+#title>.jiu{
     width: 150px;
     fill: #79bbdc;
     position: absolute;

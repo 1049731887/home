@@ -51,7 +51,7 @@
     </div>
     <div id="title">
 
-        <!-- <svg class="xing" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+        <!-- <svg class="su" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
             <g transform="scale(0.303,0.303)">
                 <g transform="translate(0,0)">
                     <g transform="translate(0,0)">
@@ -64,7 +64,7 @@
             </g>
         </svg> -->
 
-<svg class="xing" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+<svg class="su" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
     <g>
         <g>
             <rect fill="#FFFFFF" width="0" height="0" />
@@ -75,7 +75,7 @@
         </g>
     </g>
 </svg>
-        <!-- <svg class="yuan" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+        <!-- <svg class="jiu" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
             <g transform="scale(0.303,0.303)">
                 <g transform="translate(0,0)">
                     <g transform="translate(0,0)">
@@ -98,7 +98,7 @@
         </svg> -->
 
 
-        <svg class="yuan" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+        <svg class="jiu" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
             <g>
                 <g>
                     <rect fill="#FFFFFF" width="0" height="0" />
@@ -293,35 +293,35 @@
     <script>
         my_scroll=(t)=>{
             if(t==0){
-                $('#title>.xing').css('transform',`translateY(100px)`);
-                $('#title>.xing').css('opacity',`0`);
-                $('#title>.yuan').css('transform',`translateY(100px)`);
-                $('#title>.yuan').css('opacity',`0`);
+                $('#title>.su').css('transform',`translateY(100px)`);
+                $('#title>.su').css('opacity',`0`);
+                $('#title>.jiu').css('transform',`translateY(100px)`);
+                $('#title>.jiu').css('opacity',`0`);
                 $('#title>.text').css('transform',`translateY(50px)`);
                 $('#title>.text').css('opacity',`0`);
             }else if(0<t && t<100){
-                $('#title>.xing').css('transform',`translateY(${(100-t)}px)`);
-                $('#title>.xing').css('opacity',`${(t/100)}`);
-                $('#title>.yuan').css('transform',`translateY(100px)`);
-                $('#title>.yuan').css('opacity',`0`);
+                $('#title>.su').css('transform',`translateY(${(100-t)}px)`);
+                $('#title>.su').css('opacity',`${(t/100)}`);
+                $('#title>.jiu').css('transform',`translateY(100px)`);
+                $('#title>.jiu').css('opacity',`0`);
             }else if(t>=100 && t<200){
-                $('#title>.xing').css('transform',`translateY(0)`);
-                $('#title>.xing').css('opacity',`1`);
-                $('#title>.yuan').css('transform',`translateY(${(200-t)}px)`);
-                $('#title>.yuan').css('opacity',`${((t-100)/100)}`);
+                $('#title>.su').css('transform',`translateY(0)`);
+                $('#title>.su').css('opacity',`1`);
+                $('#title>.jiu').css('transform',`translateY(${(200-t)}px)`);
+                $('#title>.jiu').css('opacity',`${((t-100)/100)}`);
                 $('#title>.text').css('transform',`translateY(50px)`);
                 $('#title>.text').css('opacity',`0`);
             }else if(t>=200 && t<300){
-                $('#title>.yuan').css('transform',`translateY(0)`);
-                $('#title>.yuan').css('opacity',`1`);
+                $('#title>.jiu').css('transform',`translateY(0)`);
+                $('#title>.jiu').css('opacity',`1`);
                 $('#title>.text').css('transform',`translateY(0)`);
                 $('#title>.text').css('opacity',`1`);
                 $('#title').show(200);
             }else if(t<400){
-                $('#title>.xing').css('transform',`translateY(0)`);
-                $('#title>.xing').css('opacity',`1`);
-                $('#title>.yuan').css('transform',`translateY(0)`);
-                $('#title>.yuan').css('opacity',`1`);
+                $('#title>.su').css('transform',`translateY(0)`);
+                $('#title>.su').css('opacity',`1`);
+                $('#title>.jiu').css('transform',`translateY(0)`);
+                $('#title>.jiu').css('opacity',`1`);
                 $('#title>.text').css('transform',`translateY(0)`);
                 $('#title>.text').css('opacity',`1`);
                 $('#title').show(200);
